@@ -15,7 +15,7 @@ const OrderPage = () => {
 
     const foodItems = [
         { id: 1, img: food1, name: 'Combo Dishes', price: 250.00 },
-        { id: 2, img: food2, name: 'London Popcon', price: 50.00 },
+        { id: 2, img: food2, name: 'London Popcon', price: 100.00 },
         { id: 3, img: food3, name: 'Shawarma Pro', price: 150.00 }
     ];
     // const foodItems = Data;

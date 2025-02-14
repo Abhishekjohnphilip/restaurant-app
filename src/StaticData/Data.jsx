@@ -17,7 +17,7 @@ export const Data= [
     {
         id: "2",
         img: Food2,
-        price: "50",
+        price: "100",
         item: "London Popcon",
         likes: 3,
         heart: 2,

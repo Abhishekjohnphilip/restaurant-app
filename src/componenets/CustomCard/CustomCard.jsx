@@ -53,13 +53,13 @@ const CustomCard = ({img, price, item, likes, heart, share}) => {
                     <InfoBox>
                         <img src={likeIcon} alt="like" style={{maxwidth:'100%'}}/>
                         <Typography variant='body2' sx={{mt:1}}>
-                            {likes}
+                            {likes}k
                         </Typography>
                     </InfoBox>
                     <InfoBox>
                         <img src={heartIcon} alt="heart" style={{maxwidth:'100%'}}/>
                         <Typography variant='body2' sx={{mt:1}}>
-                            {heart}
+                            {heart}k
                         </Typography>
                     </InfoBox>
                     <InfoBox>

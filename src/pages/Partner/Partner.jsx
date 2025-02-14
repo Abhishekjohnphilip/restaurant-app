@@ -30,7 +30,7 @@ const Partner = () => {
                 <CustomContainer>
                     <CustomBox>
                         <img src={logoImg} alt="logo" style={{maxwidth:'100%',width:70}}/>
-                        <Typography variant='body2' sx={{color:'#7D8589', fontWeight:'bold', fontSize:'16px', mt:2,}}>More than 45,000 trust Techflix</Typography>
+                        <Typography variant='body2' sx={{color:'#7D8589', fontWeight:'bold', fontSize:'16px', mt:2,}}>More than 45,000 trust Bypass Bistro</Typography>
                     </CustomBox>
                     <Box>
                         <img src={starsImg} alt="stars" style={{maxwidth:'100%'}}/>
