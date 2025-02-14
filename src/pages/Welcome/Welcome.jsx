@@ -3,7 +3,9 @@ import{Box, Button, Typography} from '@mui/material'
 import {styled, Container} from '@mui/system'
 import CustomButton from '../../componenets/CustomButton/CustomButton'
 import welcome from '../../assets/welcome.png'
+import { useNavigate } from 'react-router-dom'
 const Welcome = () => {
+    const navigate = useNavigate();
     const CustomBox = styled(Box)(({theme})=>({
         // height:'100vh',
         display:'flex',
@@ -43,7 +45,7 @@ const Title = styled(Typography)(({theme})=>({
                     <Typography variant='body2' sx={{fontSize:'18px', mb:4, color:'#5A6473'}}>
                         Immerse yourself in the elegant ambiance as you savor each bite, accompanied by our extensive selection of hand-picked wines and carefully curated cocktails.
                     </Typography>
-                    <CustomButton backgroundColor="#0F1B4C" color="#fff" buttonText="More About Us" welcomeBtn={true}/>
+                    <CustomButton backgroundColor="#0F1B4C" color="#fff" buttonText="More About Us" welcomeBtn={true} onClick={() => navigate('/aboutus')}/>
                 </Box>
                 <Box sx={{flex:1.25}}>
                     <img src={welcome} alt="welcome" style={{width:'100%', marginBottom:'2rem'}}/>

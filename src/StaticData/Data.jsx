@@ -8,7 +8,7 @@ export const Data= [
     {
         id: "1",
         img: Food1,
-        price: "3500",
+        price: "250",
         item: "Combo Dishes",
         likes: 2,
         heart: 2,
@@ -17,7 +17,7 @@ export const Data= [
     {
         id: "2",
         img: Food2,
-        price: "3800",
+        price: "50",
         item: "London Popcon",
         likes: 3,
         heart: 2,
@@ -26,7 +26,7 @@ export const Data= [
     {
         id: "3",
         img: Food3,
-        price: "4700",
+        price: "150",
         item: "Shawarma Pro",
         likes: 4,
         heart: 5,

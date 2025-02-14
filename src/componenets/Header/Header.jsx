@@ -2,7 +2,7 @@ import { Box, Typography } from '@mui/material'
 import { color, display, styled } from '@mui/system';
 import React , { useState } from 'react'
 import CustomButton from '../CustomButton/CustomButton';
-import logoImg from '../../assets/logo.png'
+import logoImg from '../../assets/bistro.png'
 
 import MenuIcon from '@mui/icons-material/Menu';
 import FeaturedPlayListIcon from '@mui/icons-material/FeaturedPlayList';
@@ -93,11 +93,11 @@ const NavBarLink = styled(Typography)(()=>({
 }));
 const NavBarLogo = styled('img')(({theme})=>({
     cursor:'pointer',
-    // width:'50px',
-    // height:'50px',
+    width:'50px',
+    height:'30px',
     [theme.breakpoints.down('md')]:{
         // width:'40px',
-        // height:'40px'
+        // height:'30px',
         display:'none'
     }
 }));
@@ -147,7 +147,7 @@ const CustomMenuIcon = styled(MenuIcon)(({theme})=>({
             {list("left")}  
             </Drawer>
 
-            <NavBarLogo src={logoImg} alt='logo' />  
+            <NavBarLogo src={logoImg} alt='logo' onClick={() => navigate('/')}/>  
             </Box> 
             <NavBarLinksBox>
                 {
@@ -165,9 +165,9 @@ const CustomMenuIcon = styled(MenuIcon)(({theme})=>({
             gap:'2.5rem'
         }}
         >
-        <NavBarLink variant='body2'>Sign Up</NavBarLink>
+        <NavBarLink variant='body2'onClick={() => navigate('/underCtn')}>Sign Up</NavBarLink>
         {/* <NavBarLink variant='body2'>Register</NavBarLink> */}
-        <CustomButton backgroundColor='#0F1B4C' color='#fff' buttonText='Register'/>
+        <CustomButton backgroundColor='#0F1B4C' color='#fff' buttonText='Register'onClick={() => navigate('/underCtn')}/>
         </Box>
     </Box>
 

@@ -9,6 +9,7 @@ const CustomButton =({
   welcomeBtn,
   guideBtn,
   getStartedBtn,
+  onClick
 })=>{
 
 
@@ -41,7 +42,7 @@ const CustomButton = styled(Button)(({theme})=>({
 
 
   return (
-    <CustomButton>{buttonText}</CustomButton>
+    <CustomButton onClick={onClick}>{buttonText}</CustomButton>
   )
 }
 

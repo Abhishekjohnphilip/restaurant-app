@@ -3,7 +3,9 @@ import { Box, Container, Typography, styled } from '@mui/material'
 import deliveryImg from '../../assets/DeliveryImg.png'
 import CustomButton from '../../componenets/CustomButton/CustomButton'
 import { Padding } from '@mui/icons-material'
+import { useNavigate } from 'react-router-dom'
 const Delivery = () => {
+    const navigate = useNavigate()
 
     const CustomContainer = styled(Container)(({theme})=>({
         backgroundColor:'#FED801',
@@ -40,7 +42,7 @@ const Delivery = () => {
             <Typography sx={{color:'#000', fontSize:'16px', fontWeight:'800',fontFamily:'monospace',my:3}}>
                 Door to Door Delivery!
             </Typography>
-            <CustomButton buttonText={"Order Now!!"} color={"#17275F"} backgroundColor={"#fff"}/>
+            <CustomButton buttonText={"Order Now!!"} color={"#17275F"} backgroundColor={"#fff"} onClick={() => navigate('/order') }/>
         </Box>
         <img src={deliveryImg} alt="delivery" style={{maxWidth:'100%'}}/>    
     </CustomContainer>

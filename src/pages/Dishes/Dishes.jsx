@@ -9,6 +9,7 @@ const Dishes = () => {
         display:'flex',
         justifyContent:'space-between',
         marginTop:theme.spacing(5),
+        gap:theme.spacing(5),
         [theme.breakpoints.down('md')]:{
             flexDirection:'column',
             alignItems:'center',

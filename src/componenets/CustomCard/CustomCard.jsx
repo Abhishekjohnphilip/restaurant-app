@@ -12,6 +12,7 @@ const CustomCard = ({img, price, item, likes, heart, share}) => {
         maxWidth: 350,
         backgroundColor:'#fff',
         margin: theme.spacing(2,0,2,0),
+        width:'100%',
         [theme.breakpoints.down('md')]:{
             margin: theme.spacing(2,0,2,0),
         },
@@ -42,7 +43,7 @@ const CustomCard = ({img, price, item, likes, heart, share}) => {
 
             <Box sx={{p:"1rem"}}>
                 <Typography variant='body2' sx={{fontWeight:"700"}}>
-                    ${price}
+                    ₹{price}
                 </Typography>
                 <Typography variant='body2'sx={{my:2}}>
                     {item}

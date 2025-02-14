@@ -1,25 +1,36 @@
-import React from 'react'
-import {Box, styled, Typography} from '@mui/material'
-const NotFound =() => {
-    const CustomBox = styled(Box)(({theme})=>({
-        width:"30%",
-        [theme.breakpoints.down('md')]:{
-            width:"85%",
-        }
-    }))
-  return (
-    <Box sx={{display:'flex', justifyContent:'center', alignItems:'center', flexDirection:'column',padding:'40px', mt:'65px', mb:'100px'}}>
-        <div style={{width:"5%",height:"5px", backgroundColor:"#000339",margin:"0 auto"}}></div>
-        <Typography variant='h3' sx={{color:'#000339', fontWeight:'bold', fontSize:'35px', my:3,}}>
-            404 Error : Page Not Found
-        </Typography>
-        <CustomBox>
-            <Typography variant='body2' sx={{color:'#5A6473', fontWeight:'500', fontSize:'16px', textAlign:'center'}}>            
-                The page you are looking for might have been removed, had its name changed, or is temporarily unavailable.
-            </Typography>
-        </CustomBox>
-    </Box>
-  )
-}
+import React from 'react';
+import { Box, Typography, Button, Container } from '@mui/material';
+import { useNavigate } from 'react-router-dom';
+import CustomButton from '../../componenets/CustomButton/CustomButton';
 
-export default NotFound
+const NotFound = () => {
+    const navigate = useNavigate();
+
+    return (
+        <Container sx={{ textAlign: 'center', mt: 10 }}>
+            <Box>
+                <img 
+                    src="https://img.freepik.com/free-vector/404-error-lost-space-concept-illustration_114360-7893.jpg" 
+                    alt="404 Not Found" 
+                    style={{ width: '350px', marginBottom: '20px' }} 
+                />
+                <Typography variant="h3" sx={{ fontWeight: 'bold', color: '#DAA520', mb: 2 }}>
+                    404 Error: Page Not Found
+                </Typography>
+                <Typography variant="body1" sx={{ color: '#5A6473', fontSize: '18px', mb: 3 }}>
+                    Oops! The page you're looking for doesn't exist. It might have been moved or deleted.
+                </Typography>
+                {/* <Button 
+                    variant="contained" 
+                    sx={{ backgroundColor: '#000339', color: '#fff' }} 
+                    onClick={() => navigate('/')}
+                >
+                    Back to Home
+                </Button> */}
+                <Box sx={{ mt: 4 , mb: 4, display: 'flex', justifyContent: 'center'}}><CustomButton buttonText="Back to Home" onClick={() => navigate('/')} backgroundColor={'#DAA520'} color={'#fff'}/></Box>
+            </Box>
+        </Container>
+    );
+};
+
+export default NotFound;

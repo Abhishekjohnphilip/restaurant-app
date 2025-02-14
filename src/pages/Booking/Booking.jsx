@@ -1,6 +1,7 @@
 import React from 'react'
 import { Box, Container, Typography } from '@mui/material'
 import { margin, styled, width } from '@mui/system'
+import { useNavigate } from 'react-router-dom'
 
 import buyIcon from '../../assets/buy_icon.png'
 import sellIcon from '../../assets/sell_icon.png'
@@ -11,6 +12,7 @@ import CustomButton from '../../componenets/CustomButton/CustomButton'
 
 
 const Booking = () => {
+    const navigate = useNavigate ();
     const CustomBox = styled(Box)(({theme})=>({
        width:'30%',
        [theme.breakpoints.down('md')]:{
@@ -46,10 +48,10 @@ const Booking = () => {
     return (
         <Box sx={{display:'flex', justifyContent:'center', alignItems:'center', flexDirection:'column', padding:'40px'}}>
 
-          <div style={{width:"5%", height:"5px", backgroundColor:"#000339", margin:"0 auto",}}></div>
+          {/* <div style={{width:"5%", height:"5px", backgroundColor:"#000339", margin:"0 auto",}}></div> */}
 
           <Typography variant='h3' sx={{fontSize:'35px', fontWeight:'bold', color:'#000339', my:3}}>How to Book?</Typography>
-
+          <div style={{width:"5rem", height:"5px", backgroundColor:"#000339", margin:"0 auto", marginBottom:40}}></div>
           <CustomBox>
             <Typography variant='body2' sx={{color:'#5A6473', fontWeight:'500', fontSize:'16px', textAlign:'center',}}>
                 Everything you need to know when you book for advance slot
@@ -63,7 +65,7 @@ const Booking = () => {
                     Order Guides
                 </Typography>
                 <Box sx={{display:'flex', alignItems:'center',justifyContent:'space-between',cursor:'pointer'}}>
-                    <Typography variant='body2' sx={{color:'#0689FF', fontWeight:'bold', fontSize:'14px',}}>
+                    <Typography variant='body2' sx={{color:'#0689FF', fontWeight:'bold', fontSize:'14px',}} onClick={() => navigate("/*")}>
                         How to Order
                     </Typography>
                     <ArrowRightAltIcon sx={{color:'#0689FF'}}/>
@@ -76,7 +78,7 @@ const Booking = () => {
                     Booking Guides
                 </Typography>
                 <Box sx={{display:'flex', alignItems:'center',justifyContent:'space-between',cursor:'pointer'}}>
-                    <Typography variant='body2' sx={{color:'#0689FF', fontWeight:'bold', fontSize:'14px',}}>
+                    <Typography variant='body2' sx={{color:'#0689FF', fontWeight:'bold', fontSize:'14px',}}  onClick={() => navigate("/*")}>
                         How to Book
                     </Typography>
                     <ArrowRightAltIcon sx={{color:'#0689FF'}}/>
@@ -89,7 +91,7 @@ const Booking = () => {
                     Payment Guides
                 </Typography>
                 <Box sx={{display:'flex', alignItems:'center',justifyContent:'space-between',cursor:'pointer'}}>
-                    <Typography variant='body2' sx={{color:'#0689FF', fontWeight:'bold', fontSize:'14px',}}>
+                    <Typography variant='body2' sx={{color:'#0689FF', fontWeight:'bold', fontSize:'14px',}} onClick={() => navigate("/*")}>
                         Payment Methods
                     </Typography>
                     <ArrowRightAltIcon sx={{color:'#0689FF'}}/>
@@ -97,7 +99,7 @@ const Booking = () => {
             </GuideBox>
 
           </GuidesBox>
-          <CustomButton backgroundColor="#0F1B4C" color="#fff" buttonText="See Full Guide" guideBtn={true}/>
+          <CustomButton backgroundColor="#0F1B4C" color="#fff" buttonText="See Full Guide" guideBtn={true} onClick={() => navigate("/guides")}/>
         </Box>
     );
 };

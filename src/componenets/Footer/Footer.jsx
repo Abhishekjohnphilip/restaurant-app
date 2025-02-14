@@ -25,9 +25,13 @@ import { styled, Box, Container } from '@mui/system'
 import fbIcon from '../../assets/facebook.png'
 import igIcon from '../../assets/instagram.png'
 import twIcon from '../../assets/twitter.png'
+import { useNavigate } from 'react-router-dom'
+import { Facebook, Instagram, Twitter,WhatsApp, X } from '@mui/icons-material'
 // import linkedinIcon from '../../assets/linkedin.png'
 
 const Footer = () => {
+    const navigate = useNavigate();
+
     const CustomContainer = styled(Container)(({theme})=>({
         display:'flex',
         justifyContent:'space-between',
@@ -49,7 +53,7 @@ const Footer = () => {
         }
     }))
 
-    const FooterLink = styled(Typography)(({spna})=>({
+    const FooterLink = styled(Typography)(({theme})=>({
         fontSize:'16px',
         fontWeight:'300',
         color:'#000066',
@@ -59,6 +63,8 @@ const Footer = () => {
             color:'#6682FF'
         }
     }))
+
+    
 
     // const CustomBox = styled(Box)(({theme})=>({
     //     display:'flex',
@@ -74,27 +80,37 @@ const Footer = () => {
         <CustomContainer>
             <Box>
                 <Typography sx={{fontSize:'20px', fontWeight:'700', color:'#1C1C1D', mb:2,}}>Featured</Typography>
-                <FooterLink>Guides</FooterLink>
-                <FooterLink>Services</FooterLink>
-                <FooterLink>Contact Us</FooterLink>
+                <FooterLink onClick={()=>navigate('/guides')}>Guides</FooterLink>
+                <FooterLink onClick={()=>navigate('/services')}>Services</FooterLink>
+                <FooterLink onClick={()=>navigate('/contact')}>Contact Us</FooterLink>
             </Box>
             <Box>
                 <Typography sx={{fontSize:'20px', fontWeight:'700', color:'#1C1C1D', mb:2,}}>Overview</Typography>
-                <FooterLink>Location</FooterLink>
-                <FooterLink>Partnership</FooterLink>
-                <FooterLink>Terms & Conditions</FooterLink>
+                <FooterLink onClick={()=>navigate('/location')}>Location</FooterLink>
+                <FooterLink onClick={()=>navigate('/partnership')}>Partnership</FooterLink>
+                <FooterLink onClick={()=>navigate('/terms')}>Terms & Conditions</FooterLink>
             </Box>
             <Box>
                 <Typography sx={{fontSize:'20px', fontWeight:'700', color:'#1C1C1D', mb:2,}}>Get In Touch</Typography>
                 <Typography sx={{fontSize:'16px', fontWeight:'500', color:'#7A7A7E', mb:2,}}>Keep in touch with our social media pages.</Typography>
                 <IconBox>
-                    <img src={fbIcon} alt="Facebook Icon" style={{cursor:'pointer'}}/>
+                    {/* <img src={fbIcon} alt="Facebook Icon" style={{cursor:'pointer'}}/>
                     <img src={igIcon} alt="Instagram Icon" style={{cursor:'pointer'}}/>
-                    <img src={twIcon} alt="Twitter Icon" style={{cursor:'pointer'}}/>
+                    <img src={twIcon} alt="Twitter Icon" style={{cursor:'pointer'}}/> */}
+                    <IconBox>
+                        <Facebook sx={{cursor:'pointer',color:'#1877F2','&:hover':{color:'#FFC107'}}}/>
+                        <Instagram sx={{cursor:'pointer',color:'#E1306C','&:hover':{color:'#FFC107'}}}/>
+                        <Twitter sx={{cursor:'pointer',color:'#1DA1F2','&:hover':{color:'#FFC107'}}}/>
+                        <WhatsApp sx={{cursor:'pointer',color:'#25D366','&:hover':{color:'#FFC107'}}}/>
+                        {/* <X sx={{cursor:'pointer',color:'#FF0000','&:hover':{color:'#FFC107'}}}/> */}
+                    </IconBox>
                 </IconBox>
             </Box>
 
         </CustomContainer>
+        <Box sx={{textAlign:'center', mt:5, mb:-5}}>
+            <Typography sx={{fontSize:'14px', fontWeight:'500', color:'#7A7A7E', mt:2,}}>© 2025 Bypass Bistro. All rights reserved.</Typography>
+        </Box>
     </Box>
   )
 }
