@@ -1,7 +1,7 @@
 import React from 'react'
 import { Box, Container, Typography } from '@mui/material'
 import { styled } from '@mui/system'
-import logoImg from '../../assets/logo.png'
+import logoImg from '../../assets/bistro.png'
 import starsImg from '../../assets/Star.png'
 import logosImg from '../../assets/logos.png'
 
@@ -29,7 +29,7 @@ const Partner = () => {
             <Box sx={{mt:10}}>
                 <CustomContainer>
                     <CustomBox>
-                        <img src={logoImg} alt="logo" style={{maxwidth:'100%'}}/>
+                        <img src={logoImg} alt="logo" style={{maxwidth:'100%',width:70}}/>
                         <Typography variant='body2' sx={{color:'#7D8589', fontWeight:'bold', fontSize:'16px', mt:2,}}>More than 45,000 trust Techflix</Typography>
                     </CustomBox>
                     <Box>

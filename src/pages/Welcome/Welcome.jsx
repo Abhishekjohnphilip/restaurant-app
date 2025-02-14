@@ -37,7 +37,7 @@ const Title = styled(Typography)(({theme})=>({
             <CustomBox>
                 <Box sx={{flex:1}}>
                     <Typography variant='body2' sx={{fontSize:'18px', fontWeight:500, mt:10, mb:4, color:'#687690'}}>
-                        Welcome to Techflix Restaurant 
+                        Welcome to Bypass Bistro Restaurant 
                     </Typography>
                     <Title variant='h1'>
                         Discover a place where you'll love to Eat. 
